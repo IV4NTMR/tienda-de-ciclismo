@@ -4,10 +4,16 @@ import Title from "./Components/Title";
 import Navbar from "./Components/Navbar";
 import Router from "./Router";
 
+const styles = {
+  general: {
+    fontFamily: "Roboto, sans-serif"
+  }
+};
+
 class App extends Component {
   render() {
     return (
-      <div>
+      <div style={styles}>
         <Navbar />
         <Layout>
           <Title />
