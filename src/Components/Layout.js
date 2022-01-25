@@ -1,4 +1,7 @@
-import { Component} from 'react';
+import { Component} from 'react'
+import Productos from './Productos'
+import Title from './Title'
+import Contacto from './Contacto'
 
 const styles = {
   layout: {
@@ -21,10 +24,27 @@ const styles = {
 
 class Layout extends Component {
   render() {
+
+    const {productos, agregarAlCarro, vista, eliminarDelCarro} = this.props
     return(
       <div style={styles.layout}>
         <div style={styles.contenedor}>
-          {this.props.children}
+          <Title/>
+          <div>
+            {vista ===1 //Vista de los productos
+              ? <Productos
+                  agregarAlCarro={agregarAlCarro}
+                  productos={productos}
+                  eliminarDelCarro ={eliminarDelCarro}
+                />
+              : null
+            }
+            {vista ===2 //Vista del contacto
+              ? <Contacto/>
+              : null
+            }
+
+          </div>
         </div>
       </div>
     )

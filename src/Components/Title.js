@@ -1,11 +1,9 @@
-import {Component} from 'react'
+import { Component } from 'react';
 
 class Title extends Component {
   render() {
-    return (
-      <h1 >Tienda de Ciclismo</h1>
-    )
+    return <h1>Professional Bike Shop</h1>;
   }
 }
 
-export default Title
+export default Title;

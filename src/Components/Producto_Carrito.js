@@ -1,13 +1,9 @@
-import {Component} from "react";
+const Producto_Carrito = ({ data, addToCart }) => {
+  return;
 
-const styles = {
-    imagen:{ width: "100px", height: "60px"
-    }
-   
-}
+  <div>
+    <h3>Elemento de carrito</h3>
+  </div>;
+};
 
-class Producto_Carrito extends Component {
-    render(){
-        const { }
-    }
-}
+export default Producto_Carrito;

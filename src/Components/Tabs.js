@@ -1,36 +1,28 @@
-import {Component} from 'react'
-import Tab from './Tab'
+import { Component } from 'react';
+import Tab from './Tab';
 
 const styles = {
   contenedorTabs: {
-    height: '70px',
+    height: '10px',
     display: 'flex',
     width: '500',
     alignItems: 'center',
     justifyContent: 'space-between'
   }
-}
+};
 
 class Tabs extends Component {
-
- 
-
   render() {
+    const { tabs, cambiarVista } = this.props
 
-    const {tabs} = this.props
-
-    return(
-      <div style = {styles.contenedorTabs}>
-        {tabs.map(tab =>
-          <Tab
-            key={tab.id}
-            tab = {tab}
-            selected_tab = {this.props.selected_tab}
-          />
-        )}
+    return (
+      <div style={styles.contenedorTabs}>
+        {tabs.map(tab => (
+          <Tab key={tab.idVista} tab={tab} cambiarVista={cambiarVista} />
+        ))}
       </div>
-    )
+    );
   }
 }
 
-export default Tabs
+export default Tabs;

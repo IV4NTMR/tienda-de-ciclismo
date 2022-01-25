@@ -1,4 +1,4 @@
-import {Component} from 'react'
+import { Component } from 'react';
 
 const styles = {
   button: {
@@ -8,22 +8,24 @@ const styles = {
     border: '0px',
     borderRadius: '5px',
     padding: '10px 10px',
-    cursor: 'pointer',
+    cursor: 'pointer'
   }
-}
+};
 
 class Button extends Component {
-  render(){
-    return(
-
+  render() {
+    const {icon} = this.props
+    return (
       <button {...this.props} style={styles.button}>
-        <img alt={'icono carrito'}src="./productos/agregar-carrito.png"  
-        height={this.props.height}/> 
-          {this.props.children}
+        <img
+          alt={'icono carrito'}
+          src={icon}
+          height={this.props.height}
+        />
+        {this.props.children}
       </button>
-    )
+    );
   }
 }
 
-export default Button
-
+export default Button;

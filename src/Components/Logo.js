@@ -1,28 +1,29 @@
-import { Component} from 'react'
+import { Component } from 'react';
 
 const styles = {
-  logo: {
-    
-  },
+  logo: {},
 
   logotipo: {
     height: '50px',
     margin: '10px',
     backgroundColor: 'white',
-    borderRadius: '5px',
+    borderRadius: '5px'
   }
-}
+};
 
 class Logo extends Component {
   render() {
-
-    return(
+    return (
       <div style={styles.logo}>
-        <img alt = {'Logo'} style= {styles.logotipo}placeholder={'logo'} src={'/productos/logo.png'}/>
+        <img
+          alt={'Logo'}
+          style={styles.logotipo}
+          placeholder={'logo'}
+          src={'/productos/logo.png'}
+        />
       </div>
-      
-    )
+    );
   }
 }
 
-export default Logo
+export default Logo;

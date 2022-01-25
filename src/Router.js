@@ -1,13 +1,14 @@
-import { Routes, Route } from "react-router-dom";
-import Carrito from "./Components/Carrito";
-import Productos from "./Components/Productos";
+import { Routes, Route } from 'react-router-dom';
+import Carrito from './Components/Carrito';
+import Productos from './Components/Productos';
 
 const Router = () => {
   return (
     <Routes>
-      <Route path="/carrito" element={<Carrito />} />
-      <Route path="/" element={<Productos />}></Route>
+      <Route path='/' element={<Productos />}></Route>
+      <Route path='/carrito' element={<Carrito />} /> 
     </Routes>
   );
 };
 export default Router;
+  
